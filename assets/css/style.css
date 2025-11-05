@@ -14,55 +14,83 @@ body {
     margin: 0;
     padding: 0;
     background-color: transparent;
+   
 }
+a {
 
-.header.main-content.body-header {
+    text-decoration: none;
+}
+.header {
+    background-color: rgb(255, 213, 136);
+}
+header.fixed{
+    position: sticky;
+    top: -28px;
+}
+.header .body{
     display: flex;
+    align-items: center;
+    padding: 36px 0 8px;
 }
-
 .nav {
     margin-left: auto;
-   margin-right: 25px;
 }
-
-.nav a:hover{
-    border-radius: 20% / 50%;
-   background-color: rgb(241, 227, 209);
-}
-.nav-list {
+.nav ul {
     display: flex;
-    gap: 3.2rem;
-    align-items: center;
 }
-
-.signup-btn {
-    color: rgb(255, 255, 255);
-    border-radius: 20% / 50%;
-    background-color: rgb(0, 0, 0);
-    gap: 1.6rem;
-    align-items: center;
-    font-weight: 500;
-    padding: 3px 12px;
-
+.main-content {
+   width: 1170px;
+   max-width: calc(100% - 48px);
+   margin-left: auto;
+   margin-right: auto;
 }
-
-.body-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
+.nav a{
+    position: relative;
+    color: #5f5b53;
+    font-size: 1.6rem;
     padding: 8px 21px;
+}
+.nav li.active a,
+.nav a:hover{
+    color: #171100;
+    text-shadow: 1px 0 0 currentColor;
+}
+.nav li.active a::after{ 
+   position: absolute;
+   left: 21px;
+   bottom: 6px;
+   display: block;
+   content: "";
+   width: 12px;
+   height: 2px;
+   border-radius: 1px;
+   background: #171100;
+   
+    
+}
+.btn{
+    display: inline-block;
+    min-width: 118px;
+    padding: 0 16px;
+    background-color: #171100;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 24.5px;
+    font-size: 1.6rem;
+    transition: background-color 0.3s ease;
+    line-height: 50px;
+    /* border: 1px solid #171100; */
+      border: 1px solid #171100;
 } 
-.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.btn:hover{
+  
     background-color: #ffffff;
-    z-index: 1000;
+    color: #171100;
+}
+.header .btn-sign-up{
+   min-width: 144px;
+}
+.header .action{
+    margin-left: 49px;
 }
